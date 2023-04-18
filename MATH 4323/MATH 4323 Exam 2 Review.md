@@ -40,4 +40,6 @@
 - Suppose we have an $n$ X $p$ data set **X**. Assume that each column in **X** has a mean of 0 (each variable has a mean of 0).
 - We then look for the linear combination of the sample feature values of the form $$Z_{i1} = \phi_{11}x_{i1} + \phi_{21}x_{i2} + ... + \phi_{p1}x_{ip}$$ for $i = 1,...,n$ that has largest sample variance, subject to the constraint of $$\sum_{j=1}^p \phi_{j1}^2 = 1$$
 - Since each of the $x_{ij}$ has a mean of zero, then that means so does $Z_{i1}$.
+- The variance of $Z_{i1}$ can be written as $$\frac{1}{n}\sum_{i=1}^nZ_{i1}^2$$
+- The first principal component loading vector is an optimization problem: $$\underset{\phi_{11},...,\phi_{p1}}{max} \Bigg\{\frac{1}{n}\sum_{i=1}^n \Bigg(\sum_{j=1}^n\phi_{j1}x_{ij}\Bigg)^2\Bigg\} \ subject \ to \ \sum_{j=1}^p\phi_{j1}^2=1$$
 
